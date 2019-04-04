@@ -1,0 +1,17 @@
+type Hahmo {
+    id: ID!
+    nimi: String!
+    ika: String!
+    koko: String!
+}
+
+type Query {
+    findAllHahmo: [Hahmo]!
+    countHahmo: Long!
+}
+
+type Mutation {
+    newHahmo(id:ID!, nimi: String!,ika: String!,koko:String!) : Hahmo!
+    deleteHahmo(id: ID!) : Boolean
+    updateHahmo(nimi: String!, id: ID!) : Hahmo!
+}
